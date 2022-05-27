@@ -1,0 +1,36 @@
+div{
+    background-color: aqua;
+    height: 300px;
+}
+body{
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    background-color: black;
+}
+p{
+    color: blue;
+}
+.red-text{
+ color: red;
+} 
+/* 점을 찍으면 클래스를 가리킴 */
+.yellow-text{
+    color: yellow;
+}
+.big-size{
+    font-size: 50px;
+}
+.border{
+    border-style: dashed;
+    border-width: 1px;
+}
+
+#div1{
+    background-color: tomato;
+}
+a{
+    text-decoration: none;
+    color: grey;
+}
+a.hover {
+    color: white;
+}
