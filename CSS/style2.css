@@ -1,0 +1,20 @@
+
+a:hover {
+    color: white;
+    transition: 1s;
+}
+
+a{
+    text-decoration: none;
+    color: #C8C8C8;
+}
+
+.background{
+    background-color: #313132;
+    padding: 1px;
+}
+
+
+.white_font{
+    color: #D5D5D5;
+   } 

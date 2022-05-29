@@ -21,7 +21,8 @@ p{
 }
 .border{
     border-style: dashed;
-    border-width: 1px;
+    border-width: 5px;
+    border-color: yellow;
 }
 
 #div1{
@@ -31,6 +32,11 @@ a{
     text-decoration: none;
     color: grey;
 }
-a.hover {
-    color: white;
+a:hover {
+    color: green;
+    transition: 1s;
+}
+a:not(hover) {
+    color: gold;
+    transition: 1s;
 }
