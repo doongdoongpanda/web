@@ -10,6 +10,7 @@
     <style>
     .changecolor{
         background-color: white;
+        color: black;
     }
     .div1{
         display: inline-block;
@@ -21,25 +22,16 @@
         text-align: center;
         line-height: 50px;
     }
-    .div2{
-        display: inline-block;
-        width: 100px;
-        height: 50px;
-        color: black;
-        border-color: black;
-        background-color: white;
-        text-align: center;
-        line-height: 50px; 
-    }
+
 </style>
 
-    <div class="div1" onmouseover="changecolor()">
+    <div class="div1" onmouseover="changecolor1()" onmouseleave="backcolor1()">
         <div id="target1">html</div>
     </div>
-    <div class="div1" onmouseover="changecolor()">
+    <div class="div1" onmouseover="changecolor2()" onmouseleave="backcolor2()">
         <div id="target2">css</div>
     </div>
-    <div class="div1" onmouseover="changecolor()">
+    <div class="div1" onmouseover="changecolor3()" onmouseleave="backcolor3()">
         <div id="target3">
             java
         </div>
@@ -47,32 +39,30 @@
 
 
     <script>
-    function changecolor() {
+    function changecolor1() {
+        let $target = document.getElementById('target1');
         $target.className = 'changecolor'
     }
-
-    function changeClass2() {
-        let $target1 = document.getElementById('target1');
-        let $target2 = document.getElementById('target2');
-        let $target3 = document.getElementById('target3');
-
-
-        $target1.className = 'div1'
-        $target2.className = 'div2'
-        $target3.className = 'div1'
-
+    function backcolor1() {
+        let $target = document.getElementById('target1');
+        $target.className = 'div1'
     }
-
-    function changeClass3() {
-        let $target1 = document.getElementById('target1');
-        let $target2 = document.getElementById('target2');
-        let $target3 = document.getElementById('target3');   
-
-        $target1.className = 'div1'
-        $target2.className = 'div1'
-        $target3.className = 'div2'
+    function changecolor2() {
+        let $target = document.getElementById('target2');
+        $target.className = 'changecolor'
     }
-
+    function backcolor2() {
+        let $target = document.getElementById('target2');
+        $target.className = 'div1'
+    }
+    function changecolor3() {
+        let $target = document.getElementById('target3');
+        $target.className = 'changecolor'
+    }
+    function backcolor3() {
+        let $target = document.getElementById('target3');
+        $target.className = 'div1'
+    }
     </script>
   
 </body>
