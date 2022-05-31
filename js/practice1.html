@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,71 +8,70 @@
     <title>Document</title>
 </head>
 <style>
-.div1{
-    font-size: 100px;
-    justify-content: center;
-    text-align: center;
+    .div1 {
+        font-size: 100px;
+        justify-content: center;
+        text-align: center;
         line-height: 80%;
-    margin-top: 20%;
-}
+        margin-top: 20%;
+    }
 
-.btn{
-    font-size: 20px;
-    justify-content: center;
-    text-align: center;
+    .btn {
+        font-size: 20px;
+        justify-content: center;
+        text-align: center;
         line-height: 90%;
-    margin-top: 10%;
-}
+        margin-top: 10%;
+    }
 </style>
+
 <body>
     <script>
 
-     while (true){
-var num = String(prompt('텍스트를 입력해 주세요',''));
+        while (true) {
+            var num = String(prompt('텍스트를 입력해 주세요', ''));
 
-    if(isNaN(num) == true && isNaN(num) != null){
-        // typeof써도 된다.
-        break;
-        
-    }else if(isNaN(num)==false){
-        alert("숫자말고 텍스트 값을 입력하세요");
+            if (isNaN(num) == true && isNaN(num) != null) {
+                // typeof써도 된다.
+                break;
 
-    }else
-    {
-        alert('텍스트 값을 입력하세요');
-    }
-} 
+            } else if (isNaN(num) == false) {
+                alert("숫자말고 텍스트 값을 입력하세요");
 
-</script>
+            } else {
+                alert('텍스트 값을 입력하세요');
+            }
+        }
 
-<div id="target" class="div1">
-<script>
-document.write(num);
-</script>
+    </script>
 
-</div>
-<div id="cols" class="btn">
-    <button class="btn" onclick="changeStyle_red()">빨강</button>
-    <button class="btn" onclick="changeStyle_blue()">파랑</button>
-    <button class="btn" onclick="changeStyle_green()">초록</button>
-</div>
-<script>
-    var cols = document.querySelectorAll("#cols .btn");
+    <div id="target" class="div1">
+        <script>
+            document.write(num);
+        </script>
 
-    for (let i = 0; i < cols.length; i++) {
-        cols[i].addEventListener("click", click);
+    </div>
+    <div id="cols" class="btn">
+        <button class="btn" onclick="changeStyle_red()">빨강</button>
+        <button class="btn" onclick="changeStyle_blue()">파랑</button>
+        <button class="btn" onclick="changeStyle_green()">초록</button>
+    </div>
+    <script>
+        var cols = document.querySelectorAll("#cols .btn");
 
-    }
-    cols[0].style.color = "red";
-    cols[1].style.color = "blue";
-    cols[2].style.color = "green";
+        for (let i = 0; i < cols.length; i++) {
+            cols[i].addEventListener("click", click);
 
-    function click(e) {
-        window.alert(`${this.innerHTML}색으로 변경됩니다.` ); 
+        }
+        cols[0].style.color = "red";
+        cols[1].style.color = "blue";
+        cols[2].style.color = "green";
 
-    }
+        function click(e) {
+            alert(`${this.innerHTML}색으로 변경됩니다.`);
+        }
 
-    function changeStyle_red() {
+        function changeStyle_red() {
             let $target = document.getElementById('target');
             $target.className = 'div1'
             $target.style.color = 'red'
@@ -88,10 +88,6 @@ document.write(num);
             $target.className = 'div1'
             $target.style.color = 'green'
         }
-
-
-
-</script>
+    </script>
 </body>
-
 </html>
