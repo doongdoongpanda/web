@@ -6,13 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+.div1{
+    font-size: 100px;
+    justify-content: center;
+    text-align: center;
+        line-height: 80%;
+    margin-top: 20%;
+}
+
+.btn{
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+        line-height: 90%;
+    margin-top: 10%;
+}
+</style>
 <body>
     <script>
 
      while (true){
 var num = String(prompt('텍스트를 입력해 주세요',''));
 
-    if(isNaN(num) == true){
+    if(isNaN(num) == true && isNaN(num) != null){
         // typeof써도 된다.
         break;
         
@@ -27,12 +44,13 @@ var num = String(prompt('텍스트를 입력해 주세요',''));
 
 </script>
 
-<div id="target">
+<div id="target" class="div1">
 <script>
 document.write(num);
 </script>
+
 </div>
-<div id="cols">
+<div id="cols" class="btn">
     <button class="btn" onclick="changeStyle_red()">빨강</button>
     <button class="btn" onclick="changeStyle_blue()">파랑</button>
     <button class="btn" onclick="changeStyle_green()">초록</button>
@@ -55,19 +73,19 @@ document.write(num);
 
     function changeStyle_red() {
             let $target = document.getElementById('target');
-            $target.className = 'btn'
+            $target.className = 'div1'
             $target.style.color = 'red'
         }
 
         function changeStyle_blue() {
             let $target = document.getElementById('target');
-            $target.className = 'btn'
+            $target.className = 'div1'
             $target.style.color = 'blue'
         }
 
         function changeStyle_green() {
             let $target = document.getElementById('target');
-            $target.className = 'btn'
+            $target.className = 'div1'
             $target.style.color = 'green'
         }
 

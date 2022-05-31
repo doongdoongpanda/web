@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+    <body>
+    <style>
+    .changecolor{
+        background-color: white;
+    }
+    .div1{
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        color: white;
+        border-color: black;
+        background-color: gray;
+        text-align: center;
+        line-height: 50px;
+    }
+    .div2{
+        display: inline-block;
+        width: 100px;
+        height: 50px;
+        color: black;
+        border-color: black;
+        background-color: white;
+        text-align: center;
+        line-height: 50px; 
+    }
+</style>
+
+    <div class="div1" onmouseover="changecolor()">
+        <div id="target1">html</div>
+    </div>
+    <div class="div1" onmouseover="changecolor()">
+        <div id="target2">css</div>
+    </div>
+    <div class="div1" onmouseover="changecolor()">
+        <div id="target3">
+            java
+        </div>
+    </div>
+
+
+    <script>
+    function changecolor() {
+        $target.className = 'changecolor'
+    }
+
+    function changeClass2() {
+        let $target1 = document.getElementById('target1');
+        let $target2 = document.getElementById('target2');
+        let $target3 = document.getElementById('target3');
+
+
+        $target1.className = 'div1'
+        $target2.className = 'div2'
+        $target3.className = 'div1'
+
+    }
+
+    function changeClass3() {
+        let $target1 = document.getElementById('target1');
+        let $target2 = document.getElementById('target2');
+        let $target3 = document.getElementById('target3');   
+
+        $target1.className = 'div1'
+        $target2.className = 'div1'
+        $target3.className = 'div2'
+    }
+
+    </script>
+  
+</body>
+</html>
