@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 아 나는 스크립트 위에서 만들고 싶어하면 init -->
+
+<body onload="init()">
+    <style>
+        .small-text {
+            font-size: small;
+        }
+
+        .big-text {
+            font-size: xx-large;
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+    </style>
+
+    <script>
+        let test = document.getElementById('target');
+    </script>
+
+    <div id="target" class="small-text">hello</div>
+    <button onclick="changeStyle()">스타일 변경</button>
+    <button onclick="changeClass()">클래스 변경</button>
+    <button id="my_button">코드로 이벤트 연결</button>
+    <!-- ul>li.itme*4 치고 엔터 -->
+    <ul>
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li class="item">3</li>
+        <li class="item">4</li>
+    </ul>
+    <div id="box" onmouseover="onMouseOver()" onmouseleave="onMouseLeave()"></div>
+
+    <script>
+        function init() {
+            console.log('init!!!!!');
+
+            let $button = document.getElementById('my_button');
+            
+            $button.addEventListener('click', function () {
+                console.log('Click!!!!');
+            });
+        }
+        function onMouseOver() {
+            console.log('onMouseOver!');
+        }
+        function onMouseLeave() {
+            console.log('onMouseLeave!');
+        }
+
+        function changeStyle() {
+            let $target = document.getElementById('target');
+            $target.style.color = 'yellow'
+            //console.log('클릭');
+            $target.className = 'big-text'
+        }
+        //스크립트에서는 작은 따음표를 쓴다.!!!
+        let $target = document.getElementById('target');
+        //
+
+
+        //$가 붙으면 dom 객체다는 의미
+        //document.write('hello World<br>');
+        //document.write('hello World');
+
+        console.log('body 완료!!');
+    </script>
+</body>
+
+</html>
