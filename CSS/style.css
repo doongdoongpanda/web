@@ -1,41 +1,50 @@
-div{
+div {
     background-color: aqua;
     height: 300px;
 }
-body{
+
+body {
     font-family: 'IBM Plex Sans KR', sans-serif;
     background-color: black;
 }
-p{
+
+p {
     color: blue;
 }
-.red-text{
- color: red;
-} 
+
+.red-text {
+    color: red;
+}
+
 /* 점을 찍으면 클래스를 가리킴 */
-.yellow-text{
+.yellow-text {
     color: yellow;
 }
-.big-size{
+
+.big-size {
     font-size: 50px;
 }
-.border{
+
+.border {
     border-style: dashed;
     border-width: 5px;
     border-color: yellow;
 }
 
-#div1{
+#div1 {
     background-color: tomato;
 }
-a{
+
+a {
     text-decoration: none;
     color: grey;
 }
+
 a:hover {
     color: green;
     transition: 1s;
 }
+
 a:not(hover) {
     color: gold;
     transition: 1s;
