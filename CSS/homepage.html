@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    html,
+    body {
+      margin: 0;
+      height: 100%;
+    }
+
+    header {
+      background-color: rgb(38, 37, 37);
+      height: 50px;
+    }
+
+    .text {
+      color: white;
+      font-size: 2rem;
+    }
+
+    span {
+      color: darkred;
+    }
+
+    nav>ul>li>a {
+      color: white;
+      text-decoration: none;
+      padding: 0 10px;
+    }
+
+    nav,
+    ul,
+    li {
+      display: inline-block;
+    }
+
+
+    .title {
+      display: inline;
+      color: white;
+      padding: 20px;
+      line-height: 50px;
+    }
+
+    .align-right {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      margin-right: 10px;
+    }
+
+    main {
+      width: 100%;
+      height: 100%;
+      background-image: url("https://file.mk.co.kr/meet/neds/2021/04/image_readtop_2021_330747_16177500644599916.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .center {
+      text-align: center;
+      padding-top: 300px;
+    }
+
+    .my_button {
+      border: 2px white solid;
+      background-color: transparent;
+      color: white;
+      padding: 10px;
+    }
+  </style>
+
+  <header>
+    <div class="title">별</div>
+    <div class="align-right">
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="center">
+      <p class="text">
+        안녕하세요. 제 이름은 <span>이자영입니다</span>
+        <br>
+        개발 연습중입니다
+      </p>
+      <button class="my_button">View my work =></button>
+    </div>
+  </main>
+</body>
+
+</html>
