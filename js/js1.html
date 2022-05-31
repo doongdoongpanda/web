@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 이렇게 외부에서 데려오는 것이 일반적 기업체에서는 -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- //input type="botton" value="인사" -->
+    <button onclick="greeting()">인사</button>
+    <script>
+        // var 쓰는 걸 지양. 왜냐면 중복선언 가능하기 때문에.변종이다. let을 쓰도록하자.
+        const NUM =10;
+        let i =10;
+        i=20;
+        console.log(i);
+       //number
+        let num =10;
+       // num='hello';
+       //string
+        let text='Hello';
+       // text= 10;// 중간에 타입바뀌어도 못막는다.
+
+        //문자열병합
+        let name='이자영';
+        let age=42;
+        let result= name+'는'+age+'살입니다.';
+        result=`${name}는 ${age}살입니다.`;
+        
+        let items=[1, 2, 3, 4];
+        //var로 i를 쓰니깐 scope도 무시된다. 이상하다.
+        //for문 연습
+        for(let i=0; i < items.length;i++){
+            console.log(items[i]);
+        }
+        for(let item in items){
+            console.log(items[i]); 
+        }
+
+        function myFunc(num) {
+            console.log(num);
+        }
+
+        //Object, JSON 형태(자바스크립트 오브젝트 넘버? 객체표현)
+        let person =  {
+            name: '이자영',
+            age: 42
+        };
+    </script>
+</body>
+</html>
