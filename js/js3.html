@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="target">hello</div>
+
+    <div id="cols">
+        <button class="btn">A</button>
+        <button class="btn">B</button>
+        <button class="btn">C</button>
+    </div>
+
+    <script>
+        var cols = document.querySelectorAll("#cols .btn");
+
+        for (var i = 0; i < cols.length; i++) {
+            cols[i].addEventListener("click", click);
+        }
+        cols[1].style.color = "red";
+
+        function click(e) {
+            window.alert(this.innerHTML);
+        }
+
+    function btn() {
+        let $target = document.getElementById('target');
+        $button.addEventListener('click', function () {
+                alert('Click!!!!');
+
+            });
+            $target.style.color = 'yellow'
+        //console.log('클릭');
+        $target.className = 'big-text'
+    }
+
+</script>
+</body>
+
+</html>

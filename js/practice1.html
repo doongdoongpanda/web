@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+     while (true){
+var num = String(prompt('텍스트를 입력해 주세요',''));
+
+    if(isNaN(num) == true){
+        // typeof써도 된다.
+        break;
+        
+    }else if(isNaN(num)==false){
+        alert("숫자말고 텍스트 값을 입력하세요");
+
+    }else
+    {
+        alert('텍스트 값을 입력하세요');
+    }
+} 
+
+</script>
+
+<div id="target">
+<script>
+document.write(num);
+</script>
+</div>
+<div id="cols">
+    <button class="btn" onclick="changeStyle_red()">빨강</button>
+    <button class="btn" onclick="changeStyle_blue()">파랑</button>
+    <button class="btn" onclick="changeStyle_green()">초록</button>
+</div>
+<script>
+    var cols = document.querySelectorAll("#cols .btn");
+
+    for (let i = 0; i < cols.length; i++) {
+        cols[i].addEventListener("click", click);
+
+    }
+    cols[0].style.color = "red";
+    cols[1].style.color = "blue";
+    cols[2].style.color = "green";
+
+    function click(e) {
+        window.alert(`${this.innerHTML}색으로 변경됩니다.` ); 
+
+    }
+
+    function changeStyle_red() {
+            let $target = document.getElementById('target');
+            $target.className = 'btn'
+            $target.style.color = 'red'
+        }
+
+        function changeStyle_blue() {
+            let $target = document.getElementById('target');
+            $target.className = 'btn'
+            $target.style.color = 'blue'
+        }
+
+        function changeStyle_green() {
+            let $target = document.getElementById('target');
+            $target.className = 'btn'
+            $target.style.color = 'green'
+        }
+
+
+
+</script>
+</body>
+
+</html>
