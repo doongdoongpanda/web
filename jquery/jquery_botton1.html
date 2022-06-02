@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+              // 기존 이벤트 연결
+      document.getElementById('button1')
+        .addEventListener('click', function () {
+          console.log('클릭 1 !!');
+        });
+
+              // jquery 방식의 이벤트 연결
+      $('#button1').on('click', function () {
+        console.log('JQuery 클릭 1 !!');
+      });
+
+      $('#button1').click(function () {
+        console.log('JQuery(2) 클릭 1 !!');
+      });
+
+      // 메서드 체인
+      $('#button2').click(function () {
+        console.log('JQuery 클릭 2');
+      }).mouseover(function () {
+        console.log('JQuery 마우스 오버 2');
+      }).mouseleave(function () {
+        console.log('JQuery 마우스 떠나기 2');
+      });
+
+    </script>
+  <div id="title">title</div>
+  <button id="button1">클릭1</button>
+  <button id="button2">클릭2</button>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200;300;400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        /* flex 많이쓰지만 오늘은 line-height 쓰자 */
+        .container {
+            width: 230px;
+
+        }
+
+        #header {
+            background-color: #455C9F;
+            padding: 10px;
+        }
+
+        .content {
+            background-color: #E6E7EA;
+            padding: 10px;
+        }
+
+        .item {
+            background-color: white;
+            margin: 10px;
+        }
+    </style>
+    <div class="container">
+        <div id="header">둥둥팬더님 안녕하세요</div>
+        <div class="content">
+            <div class="item"></div>
+
+            <div class="item"><b>박지성</b> SBS에서 월드컵보세요!</div>
+            <div class="item"><b>안정환</b> MBC죠...</div>
+            <div class="item"><b>이영표</b> KBS에서 월드컵보세요!</div>
+
+        </div>
+    </div>
+    <br><button id="add_button">등록하기</button>
+    </div>
+    <script>
+        $('#add_button').click(function () {
+            let text = prompt('기사 내용');
+
+        $('.content').append(`<div class="item">${text}</div>`);
+      });
+    </script>
+</body>
+
+</html>

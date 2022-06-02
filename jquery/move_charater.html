@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<body>
+    <style>
+        #container{
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border: 1px black solid;
+            left: 30%;
+            top: 30%;
+            
+        }
+        #bob{
+            position: relative;
+            width: 200px;
+            left: 100px;
+            height: 200px;
+
+        }
+    </style>
+<div id="container">
+    <img id="bob" src="../assets/bob.gif" alt="minions">
+</div>
+<script>
+    let bob= $('#bob');
+    //상수 정의해주는게 좋다. 가독성 측면에서 
+    const GAME_WIDTH = 600;
+    const GAME_HEIGHT = 600;
+
+    
+    const MOVE =25;
+    const BOB_HEIGHT=200;
+    const BOB_WIDTH=200;
+
+    
+
+
+    $('body').keydown(function(event){
+     let top = Number(bob.css('top').replace('px',''));
+    let bottom = top + BOB_HEIGHT;
+    let left = Number(bob.css('left').replace('px',''));
+    let right = left + BOB_WIDTH;
+
+    console.log(event.key);
+
+        switch(event.key){
+            case 'ArrowUp':
+                if(top - MOVE < 0){
+                    return;
+                }
+                bob.css({top:'-=25px'});
+                break;
+                case 'ArrowDown':
+                if(bottom +MOVE > GAME_HEIGHT){
+                    return;
+                }
+
+               // console.log('아래');
+                bob.css({top:'+=25px'});
+                break;
+                case 'ArrowRight':
+                if(right +MOVE > GAME_WIDTH){
+                    return;
+                }
+
+
+               //console.log('오른쪽');
+                bob.css({left:'+=25px'});
+                break;
+                case 'ArrowLeft':
+                if(left - MOVE < 0){
+                    return;
+                }
+                bob.css({left:'-=25px'});
+                break;
+        }
+    });    
+    //$bob.css({left:'-=25px'})
+
+</script>
+</body>
+</html>
