@@ -1,99 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
 
     <title>Document</title>
     <style>
-        .div1{
+        .div1 {
             width: 100px;
             display: inline-block;
             height: 30px;
-
         }
-        .div2{
-            width:240px;
+
+        .div2 {
+            width: 240px;
             display: inline-block;
         }
-        .button{
-            width:340px;
+
+        .button {
+            width: 340px;
             font-size: 20px;
-        text-align: center;
-        margin-top: 5%;
+            text-align: center;
+            margin-top: 5%;
         }
-
-
     </style>
 </head>
-<body>
 
-    <div class="div1"> 아이디 </div> 
+<body>
+    <div class="div1"> 아이디 </div>
     <input type="text" id="text_id">
     <br>
     <div class="div1"> 비밀번호 </div> <input type="text" id="text_pwd"><br>
-    <div class="div1">성별</div> <input type="radio" name ="ss" >남자
-        <input type="radio" name ="ss" >여자<br>
+    <div class="div1">성별</div> <input type="radio" name="ss">남자
+    <input type="radio" name="ss">여자<br>
     <div>
         <div class="div1">직업</div>
         <select id="job">
-        <option value="none"> </option>
-        <option value="student">학생</option>
-        <option value="former">농부</option>
-        <option value="fisherman">어부</option>
-    </select>
-</div>
+            <option value="none"> </option>
+            <option value="student">학생</option>
+            <option value="former">농부</option>
+            <option value="fisherman">어부</option>
+        </select>
+    </div>
     <div class="div1">
-    취미</div>
+        취미</div>
     <div class="div2">
-    <input type="checkbox" name ="interest" >개발
-    <input type="checkbox" name ="interest" >게임
-    <input type="checkbox" name ="interest" >낚시
-    <input type="checkbox" name ="interest" >운동
-    <input type="checkbox" name ="interest" >독서
-    <input type="checkbox" name ="interest" >음악감상
-</div>  
-<br>  
-<div class="button">
+        <input type="checkbox" name="interest">개발
+        <input type="checkbox" name="interest">게임
+        <input type="checkbox" name="interest">낚시
+        <input type="checkbox" name="interest">운동
+        <input type="checkbox" name="interest">독서
+        <input type="checkbox" name="interest">음악감상
+    </div>
+    <br>
+    <div class="button">
         <input type="button" onclick="cancel()" value="취소">
         <input type="button" onclick="check()" value="회원가입">
-</div>
+    </div>
+
+    <script>
+        function check() {
+            let chk_id = $("#text_id").val();
+            $size_chk_pwd = $("#text_pwd").val();
+            $obj_length = $("input:checkbox[name='interest']:checked").length;
+            if (chk_id.indexOf('@') == -1 || chk_id.indexOf('.') == -1) {
+                alert("아이디는 이메일 형식이여야 합니다.");
+            } else if ($size_chk_pwd.length < 5) {
+                alert(" 문자열이 5자 이하입니다.");
+            } else if ($obj_length < 3) {
+                alert("취미사항을 최소 3개 이상 선택해주세요");
+            } else if ($(':radio[name=ss]:checked').length < 1) {
+                alert("성별이 아무것도 체크되지 않았습니다.");
+            } else if ($('[id=job] > option:selected').val() == 'none') {
+                alert("직업이 체크되지 않았습니다.");
+            } else {
+                alert("회원가입완료되었습니다.짝짝짝");
+            }
 
 
-<script>
-function check(){
-	let chk_id = $("#text_id").val();
-    $size_chk_pwd = $("#text_pwd").val();
-    $obj_length = $("input:checkbox[name='interest']:checked").length;   
-	if( chk_id.indexOf('@') == -1 || chk_id.indexOf('.') == -1){
-    alert("아이디는 이메일 형식이여야 합니다.");
-    }else if($size_chk_pwd.length < 5){
-        alert(" 문자열이 5자 이하입니다."); 
-    }else if($obj_length < 3){
-            alert("취미사항을 최소 3개 이상 선택해주세요");
-    }else if($(':radio[name=ss]:checked').length < 1){
-   alert("성별이 아무것도 체크되지 않았습니다.");
-}else if($('[id=job] > option:selected').val() == 'none'){
-    alert("직업이 체크되지 않았습니다.");
-}else{
-    alert("회원가입완료되었습니다.짝짝짝");
-}
+        }
 
+        function cancel() {
+            $('#text_id').val('');
+            $('#text_pwd').val('');
+            $('#job').val('');
+            $("input[type=checkbox]").prop("checked", false);
+            $("input[type=radio]").prop("checked", false);
+        }
 
-}
-
-function cancel(){
-    $('#text_id').val('');
-    $('#text_pwd').val('');
-    $('#job').val('');
-    $("input[type=checkbox]").prop("checked", false);
-    $("input[type=radio]").prop("checked", false);
-}
-
-</script>
+    </script>
 </body>
+
 </html>
