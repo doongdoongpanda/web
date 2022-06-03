@@ -41,6 +41,7 @@
         const BOB_WIDTH = 200;
 
         $('body').keydown(function (event) {
+            //console.log(event.key);
             let top = Number(bob.css('top').replace('px', ''));
             let bottom = top + BOB_HEIGHT;
             let left = Number(bob.css('left').replace('px', ''));

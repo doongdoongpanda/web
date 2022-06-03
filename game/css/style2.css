@@ -1,0 +1,18 @@
+body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    border: 1px black solid;
+    width: 1200px;
+    height: 600px; 
+    position: relative;
+
+  }
+
+  .gameover{
+    position: absolute;
+    background-color: ghostwhite;
+    top: 0px;
+    left: 0px;
+  }
