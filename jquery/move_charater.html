@@ -34,17 +34,11 @@
     </div>
     <script>
         let bob = $('#bob');
-        //상수 정의해주는게 좋다. 가독성 측면에서 
         const GAME_WIDTH = 600;
         const GAME_HEIGHT = 600;
-
-
         const MOVE = 25;
         const BOB_HEIGHT = 200;
         const BOB_WIDTH = 200;
-
-
-
 
         $('body').keydown(function (event) {
             let top = Number(bob.css('top').replace('px', ''));
