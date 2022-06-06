@@ -9,7 +9,7 @@
   #startbg {
     position: absolute;
     width: 600x;
-    position: absolute;
+
     bottom: 1%;
     left: 1%;
     filter: brightness(120%);
@@ -19,7 +19,6 @@
   #startbgBack{
     position: absolute;
     width: 600x;
-    position: absolute;
     bottom: 1%;
     left: 65%;
     transform: scaleX(-1);
