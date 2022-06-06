@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <div class="container">
+    <img id="endbg" src="assets/endbg.gif" alt="endbg" width=" 1000px">
+    <img id="gameOver" src="assets/gameover.gif" alt="gameOver" width="600px">
+    <img alt="retry" src="assets/retry.png" class="retry" id="retry">
+    <img alt="scoreBoard" src="assets/scoreboard.png" class="scoreBoard" id="scoreBoard">
+    <div class="result">You got</div>
+    <div class="result2"></div>
+</div>
+<script>
+    $("#scoreBoard").hide().show("2000"); 
+    $(document).ready(function () {
+			let val = location.href.substr(location.href.lastIndexOf('=') + 1);
+            $('.result').hide().show('2000');
+            $('.result2').hide().show('2000');
+            $('.result2').text(`${val} points`);
+		console.log(val);
+		});
+    //let favoritemovie = sessionStorage.getItem("favoriteMovie");
+    //console.log(favoritmovie);
+   // $('#result').text(`score: ${val}`);
+
+
+    $("#retry").hide().show("10000"); 
+    $('#retry').bind('click', function(event){ 
+        var url = 'gamestart.html';
+    $(location).attr('href',url);
+    });
+
+</script>
+</body>
+</html>

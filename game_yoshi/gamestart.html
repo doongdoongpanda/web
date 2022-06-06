@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style3.css">
+</head>
+<body>
+    <div class="container">
+    <img id="startbg" src="assets/startbg.gif" alt="startbg" width="400px">
+    <img id="startbgBack" src="assets/startbg.gif" alt="startbg" width="400px">
+    <img alt="start" src="assets/start.png" class="start" id="start">
+    <img alt="title" src="assets/title.png" class="title" id="title">
+</div>
+<script>
+        let url = "index.html";
+        go();
+        $('#start').hide().show("3000"); 
+        $('#start').bind('click', function(event){ 
+        $('.container').animate({opacity:'0'}, 1000);
+        //if($('.container').css('opacity') == 0) {
+            
+        $(location).attr('href',url);
+       
+    });
+
+   function go(){
+    $('#startbgBack').hide();
+    $('#startbg').show().animate({ left: '65%' }, 2000, function () {   
+        $('#startbg').css('left', '1%').stop().hide();
+        back();
+    });
+   };
+
+   function back(){
+    $('#startbg').hide();
+    $('#startbgBack').show();
+        $('#startbgBack').animate({ left: '1%' }, 2000, function(){
+            $('#startbgBack').css('left', '65%').stop().hide();
+            go();
+        });  
+   };
+
+</script>
+</body>
+</html>

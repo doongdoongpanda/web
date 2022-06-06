@@ -1,0 +1,54 @@
+  .container {
+    width: 1000px;
+  
+    overflow: hidden;
+    position: relative;
+
+    border: black solid;
+
+  }
+  .endbg {
+    position: absolute;
+    height: 800px;
+  }
+
+  .result{
+    position: absolute;
+    position: absolute;
+    font-size: 25px;
+    left: 19%;
+    bottom: 59%;
+    font-family: 'Jua', sans-serif;
+  }
+
+  .result2{
+    position: absolute;
+    position: absolute;
+    font-size: 35px;
+    left: 14%;
+    bottom: 50%;
+    width: 190px;
+    text-align: right;
+    font-family: 'Jua', sans-serif;
+  }
+
+  .retry{
+    position: absolute;
+    width: 20%;
+    left: 65%;
+    bottom: 65%;
+  }
+  .scoreBoard{
+    position: absolute;
+    width: 33%;
+    left: 7%;
+    bottom: 33%;
+  }
+
+  #gameOver{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    bottom: 1%;
+  }
+

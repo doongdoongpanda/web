@@ -1,0 +1,42 @@
+.container {
+    border: black solid;
+    width: 1000px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+
+  }
+  #startbg {
+    position: absolute;
+    width: 600x;
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    filter: brightness(120%);
+    opacity: 45%;
+  }
+
+  #startbgBack{
+    position: absolute;
+    width: 600x;
+    position: absolute;
+    bottom: 1%;
+    left: 65%;
+    transform: scaleX(-1);
+    filter: brightness(120%);
+    opacity: 45%;
+  }
+ 
+  .start{
+    position: absolute;
+    width: 20%;
+    left: 45%;
+    bottom: 5%;
+  }
+
+  .title{
+    position: absolute;
+    width: 50%;
+    left: 28%;
+    bottom: 50%;
+  }
