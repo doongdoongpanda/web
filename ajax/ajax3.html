@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //get 방식, 가장 최근 버전
+        function loadDoc(){
+            //fetch 결과를 then으로 닫느다.
+            //비동기는 == 오래 걸리는 동작 
+            fetch('ajax_info.txt')
+            // function(function (response){
+            //     return response.text();
+            // }) //위랑 아래랑 같다.
+            //화살표 표기법(arrow function)
+            //람다식 (lamda expression)
+            .then(response => response.text())// 기다렸다가 여기서 처리 promise는 다 오래 걸린다.
+            .then(text => {
+                document.getElementById('demo').innerHTML = text;
+            });
+            console.log('end');// 얘가 then 보다 먼저 출력됨
+        }
+    </script>
+    <div id="demo"></div>
+    <button onclick="loadDoc()">get data</button>
+</body>
+</html>
