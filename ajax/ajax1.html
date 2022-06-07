@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-       function loadDoc() {
-           //XMLHttpRequest 생성
- var xhttp = new XMLHttpRequest();
- //응답이 왔을때의 콜백 함수 정의. 응답이 왔어? 그럼 뭘할거냐를 정해줌
- xhttp.onreadystatechange = function() {
-     //this.readyState == 4 :정상완료 ( 응답이 왔으면)
-     // this.status == 200 : 성공 (서버입장에서 성공이라고 정했음)
-    //this.readyState == 404 : 파일을 못찾았다.
-    //통신이랑 리퀘스트랑 한세튼데 응답이 오면 그럼 정상 완료
- if (this.readyState == 4 && this.status == 200) {
- document.getElementById("demo").innerHTML =
- this.responseText;
- }
- };
- //통신 방식이나 대상을 설정
- //방식 : get(읽기), post(쓰기), patch, delete...
- //true는 비동기로 쓸거냐 해서 true
- //
- xhttp.open("GET", "ajax_info.txt", true);
- //
- xhttp.send();
-}
+        function loadDoc() {
+            //XMLHttpRequest 생성
+            var xhttp = new XMLHttpRequest();
+            //응답이 왔을때의 콜백 함수 정의. 응답이 왔어? 그럼 뭘할거냐를 정해줌
+            xhttp.onreadystatechange = function () {
+                //this.readyState == 4 :정상완료 ( 응답이 왔으면)
+                // this.status == 200 : 성공 (서버입장에서 성공이라고 정했음)
+                //this.readyState == 404 : 파일을 못찾았다.
+                //통신이랑 리퀘스트랑 한세튼데 응답이 오면 그럼 정상 완료
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo").innerHTML =
+                        this.responseText;
+                }
+            };
+            //통신 방식이나 대상을 설정
+            //방식 : get(읽기), post(쓰기), patch, delete...
+            //true는 비동기로 쓸거냐 해서 true
+            //
+            xhttp.open("GET", "ajax_info.txt", true);
+            //
+            xhttp.send();
+        }
 
     </script>
     <div id="demo"></div>
     <button onclick="loadDoc()">get data</button>
 </body>
+
 </html>
