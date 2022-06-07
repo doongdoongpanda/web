@@ -10,15 +10,18 @@
 </head>
 <body>
     <script>
-        $(function (){
-            //2번째 방식
-            $('#get_data_button').click(function(){
-                //get방식
-                $('#demo').load('ajax_info.txt');
+        $(function () {
+          $('#get_data_button').click(function () {
+            // GET 방식
+            // $('#demo').load('ajax_info.txt');
+            $.getJSON('people.json', function (json) {
+              console.log(json);
+              // $('#demo').html(JSON.stringify(json));
+              $('#demo').html(`${json.name} : ${json.skill}`);
             });
-
+          });
         });
-    </script>
+      </script>
     <div id="demo"></div>
     <button id="get_data_button">get data</button>
 </body>
