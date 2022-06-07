@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <style>
+    .card {
+      /* Add shadows to create the "card" effect */
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      background-color: rgb(63, 63, 63);
+      color: rgb(214, 214, 214);
+      margin-bottom: 10px;
+      width: 300px;
+      display: inline-block;
+      font-family: 'IBM Plex Sans KR', sans-serif;
+font-family: 'Jua', sans-serif;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Nanum Gothic Coding', monospace;
+    }
+
+
+    /* Add some padding inside the card container */
+    .container {
+      padding: 30px 16px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body onload="loadData()">
+  <script>
+    function moveCommentsPage(id) {
+      console.log(id);
+      // 페이지 이동
+      document.location.href = `exam5_details.html?id=${id}`;
+    }
+
+
+    function loadData() {
+      fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=a64533e7ece6c72731da47c9c8bc691f&language=ko-KR&page=1')
+        .then(response => response.json())
+        .then(jsonArray => {
+         // let result = `${json.results}`;
+         //jsonArray.forEach((results, i) => {
+         // console.log(jsonArray);
+          let $list = $('#list');
+          jsonArray.results.forEach((data, i) => {
+            $list.append(`<div class="card" onclick="moveCommentsPage(${data.id})"> 
+              <img src="https://image.tmdb.org/t/p/w500/${data.backdrop_path}" style="width:100%">
+              <div class="container">
+            <h4><b>${data.title}</b></h4></div></div>`);
+          })
+        });
+      };
+ 
+  </script>
+
+  <div id="list">
+  </div>
+
+</body>
+
+</html>
