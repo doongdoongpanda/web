@@ -12,15 +12,20 @@
         function loadDoc(){
             //fetch 결과를 then으로 닫느다.
             //비동기는 == 오래 걸리는 동작 
-            fetch('ajax_info.txt')
+            fetch('people.json')
             // function(function (response){
             //     return response.text();
             // }) //위랑 아래랑 같다.
             //화살표 표기법(arrow function)
             //람다식 (lamda expression)
-            .then(response => response.text())// 기다렸다가 여기서 처리 promise는 다 오래 걸린다.
-            .then(text => {
-                document.getElementById('demo').innerHTML = text;
+            .then(response => response.json())// 기다렸다가 여기서 처리 promise는 다 오래 걸린다.
+            .then(json => {
+                console.log(json);// 얘가 then 보다 먼저 출력됨
+
+                let result = `${json.name} : ${json.skill}`;
+
+                document.getElementById('demo').innerHTML = result;
+                document.getElementById('json').innerHTML = JSON.stringify(json);
             });
             console.log('end');// 얘가 then 보다 먼저 출력됨
         }
