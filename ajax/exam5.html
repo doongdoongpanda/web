@@ -19,9 +19,9 @@
       width: 300px;
       display: inline-block;
       font-family: 'IBM Plex Sans KR', sans-serif;
-font-family: 'Jua', sans-serif;
-font-family: 'Nanum Gothic', sans-serif;
-font-family: 'Nanum Gothic Coding', monospace;
+      font-family: 'Jua', sans-serif;
+      font-family: 'Nanum Gothic', sans-serif;
+      font-family: 'Nanum Gothic Coding', monospace;
     }
 
 
@@ -46,9 +46,9 @@ font-family: 'Nanum Gothic Coding', monospace;
       fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=a64533e7ece6c72731da47c9c8bc691f&language=ko-KR&page=1')
         .then(response => response.json())
         .then(jsonArray => {
-         // let result = `${json.results}`;
-         //jsonArray.forEach((results, i) => {
-         // console.log(jsonArray);
+          // let result = `${json.results}`;
+          //jsonArray.forEach((results, i) => {
+          // console.log(jsonArray);
           let $list = $('#list');
           jsonArray.results.forEach((data, i) => {
             $list.append(`<div class="card" onclick="moveCommentsPage(${data.id})"> 
@@ -57,8 +57,8 @@ font-family: 'Nanum Gothic Coding', monospace;
             <h4><b>${data.title}</b></h4></div></div>`);
           })
         });
-      };
- 
+    };
+
   </script>
 
   <div id="list">
