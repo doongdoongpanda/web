@@ -33,12 +33,13 @@ font-family: 'Nanum Gothic Coding', monospace;
   .img{
     width: 100px;
     position: absolute;
+
     bottom: 65px;
     left: 150px;
   }
 </style>
 <body>
-  <button onclick="output()">Back</button>
+  <button onclick="back()">Back</button>
   <script>
     $(function () {
         const queryString = window.location.search;
@@ -60,7 +61,7 @@ font-family: 'Nanum Gothic Coding', monospace;
     });
 
   
- function output() {
+ function back() {
 history.go(-1); 
  }
 </script>
