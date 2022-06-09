@@ -61,7 +61,6 @@ public class word {
 	//자음 확인2
     public boolean isConsonat2(int i) {
     	String vowel = "aiueo";
-		String word = letters.substring(i, i+1);
 		boolean answer = true;
 			if(vowel.contains(letters.substring(i, i+1))) {
 				answer = false;
