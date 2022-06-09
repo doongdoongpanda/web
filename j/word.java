@@ -9,7 +9,7 @@ public class word {
 		System.out.println(word.isVowel2(1));
 		System.out.println(word.isVowel3(1));
 		System.out.println(word.isConsonat(1));
-
+		System.out.println(word.isConsonat(2));
 
 	}
 	private String letters;
@@ -58,4 +58,15 @@ public class word {
 		}
 		return answer;
 	}
+	//자음 확인2
+    public boolean isConsonat2(int i) {
+    	String vowel = "aiueo";
+		String word = letters.substring(i, i+1);
+		boolean answer = true;
+			if(vowel.contains(letters.substring(i, i+1))) {
+				answer = false;
+			} 
+		return answer;
+	}
+
 }
