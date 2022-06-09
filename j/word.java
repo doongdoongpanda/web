@@ -8,6 +8,7 @@ public class word {
 		System.out.println(word.isVowel1(1));
 		System.out.println(word.isVowel2(1));
 		System.out.println(word.isVowel3(1));
+		System.out.println(word.isConsonat(1));
 
 
 	}
@@ -39,6 +40,20 @@ public class word {
 			if(word.equals(vowel[0]) || word.equals(vowel[1]) || word.equals(vowel[2]) || word.equals(vowel[3])
 					 || word.equals(vowel[4])) {
 				answer = true;
+			} 
+		}
+		return answer;
+	}
+	
+	//자음 확인
+    public boolean isConsonat(int i) {
+    	String [] vowel = {"a", "i", "u", "e", "o"};
+		String word = letters.substring(i, i+1);
+		boolean answer = true;
+		for(int j = 0; j < vowel.length; j++) {
+			if(word.equals(vowel[0]) || word.equals(vowel[1]) || word.equals(vowel[2]) || word.equals(vowel[3])
+					 || word.equals(vowel[4])) {
+				answer = false;
 			} 
 		}
 		return answer;
