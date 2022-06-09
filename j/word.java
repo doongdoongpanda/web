@@ -68,7 +68,7 @@ public class word {
 		return answer;
 	}
 
-	// 자음 확인3
+	// 자음 확인3 (중복되지 않게)메서드를 최대한 활용하자
 	public boolean isConsonat3(int i) {
 		return !isVowel3(i);
 	}
