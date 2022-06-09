@@ -1,4 +1,4 @@
-package exam;
+package j;
 
 public class word {
 	public static void main(String[] args) {
