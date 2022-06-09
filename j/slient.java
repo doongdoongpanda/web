@@ -8,7 +8,7 @@ public class silent_zone {
 
 	public static void main(String[] args) {
 
-		// Circle circle = new Circle(3.1);
+		// Circle circle = new Circle();
 		// Scanner scan = new Scanner(System.in);
 
 		Scanner scanner = new Scanner(System.in);
